@@ -1,0 +1,202 @@
+.TH "901771.c" 3 "901771" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+901771.c
+.SH SYNOPSIS
+.br
+.PP
+\fR#include <stdio\&.h>\fP
+.br
+\fR#include <stdbool\&.h>\fP
+.br
+\fR#include <stdlib\&.h>\fP
+.br
+\fR#include <string\&.h>\fP
+.br
+\fR#include <math\&.h>\fP
+.br
+\fR#include <time\&.h>\fP
+.br
+\fR#include <ctype\&.h>\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBelem\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef unsigned char \fBuchar\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBelem\fP \fBelemento\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBStatus\fP { \fBCONTINUE\fP, \fBINTERACTIVE\fP, \fBAI\fP, \fBFINISH\fP }"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBstampa_intestazione\fP (int row, int col)"
+.br
+.ti -1c
+.RI "void \fBstampa_tessera\fP (int const s, int const d)"
+.br
+.ti -1c
+.RI "void \fBstampa_tessere\fP (\fBelemento\fP *tessere, int qty)"
+.br
+.ti -1c
+.RI "bool \fBis_null\fP (\fBelemento\fP *tessere, int i)"
+.br
+.ti -1c
+.RI "bool \fBis_void\fP (\fBelemento\fP *tessere, int qty)"
+.br
+.ti -1c
+.RI "bool \fBis_match\fP (\fBelemento\fP *tessere, int qty, int s, int d, int lato)"
+.br
+.ti -1c
+.RI "bool \fBcontinue_game\fP (\fBelemento\fP *tessere, \fBelemento\fP *campo, int qty)"
+.br
+.ti -1c
+.RI "int \fBricerca_tessera\fP (\fBelemento\fP *tessere, int qty, int s, int d)"
+.br
+.ti -1c
+.RI "void \fBaggiorna_tessere\fP (\fBelemento\fP *tessere, \fBelemento\fP *campo, int qty, int s, int d, int lato)"
+.br
+.ti -1c
+.RI "int \fBcalcolo_punteggio\fP (\fBelemento\fP *tessere, int qty)"
+.br
+.ti -1c
+.RI "int \fBbest_comb_rec\fP (\fBelemento\fP *tessere, \fBelemento\fP *campo, int qty, int camp_qty, int act_sum, int ind_tex, int mode)"
+.br
+.ti -1c
+.RI "int \fBbest_comb\fP (\fBelemento\fP *tessere, \fBelemento\fP *campo, int qty, \fBelemento\fP *tessere_rim, int *s, int *d, int *ind)"
+.br
+.ti -1c
+.RI "int \fBsingle_comb\fP (\fBelemento\fP *tessere, \fBelemento\fP *campo, int qty, \fBelemento\fP *tessere_rim, int s, int d, int ind, int mode)"
+.br
+.ti -1c
+.RI "void \fBgioco\fP (\fBelemento\fP *tessere, \fBelemento\fP *campo, int qty)"
+.br
+.ti -1c
+.RI "int \fBinteractive_mode\fP (int enable, \fBelemento\fP *tessere, \fBelemento\fP *campo, int qty)"
+.br
+.ti -1c
+.RI "int \fBAI_mode\fP (int enable, \fBelemento\fP *tessere, \fBelemento\fP *campo, int qty)"
+.br
+.ti -1c
+.RI "int \fBmain\fP ()"
+.br
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct \fBelem\fP \fBelemento\fP"
+
+.PP
+Definition at line \fB18\fP of file \fB901771\&.c\fP\&.
+.SS "typedef unsigned char \fBuchar\fP"
+
+.PP
+Definition at line \fB11\fP of file \fB901771\&.c\fP\&.
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBStatus\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fICONTINUE \fP\fP
+.TP
+\fB\fIINTERACTIVE \fP\fP
+.TP
+\fB\fIAI \fP\fP
+.TP
+\fB\fIFINISH \fP\fP
+.PP
+Definition at line \fB9\fP of file \fB901771\&.c\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "void aggiorna_tessere (\fBelemento\fP * tessere, \fBelemento\fP * campo, int qty, int s, int d, int lato)"
+
+.PP
+Definition at line \fB153\fP of file \fB901771\&.c\fP\&.
+.SS "int AI_mode (int enable, \fBelemento\fP * tessere, \fBelemento\fP * campo, int qty)"
+
+.PP
+Definition at line \fB467\fP of file \fB901771\&.c\fP\&.
+.SS "int best_comb (\fBelemento\fP * tessere, \fBelemento\fP * campo, int qty, \fBelemento\fP * tessere_rim, int * s, int * d, int * ind)"
+
+.PP
+Definition at line \fB244\fP of file \fB901771\&.c\fP\&.
+.SS "int best_comb_rec (\fBelemento\fP * tessere, \fBelemento\fP * campo, int qty, int camp_qty, int act_sum, int ind_tex, int mode)"
+
+.PP
+Definition at line \fB202\fP of file \fB901771\&.c\fP\&.
+.SS "int calcolo_punteggio (\fBelemento\fP * tessere, int qty)"
+
+.PP
+Definition at line \fB196\fP of file \fB901771\&.c\fP\&.
+.SS "bool continue_game (\fBelemento\fP * tessere, \fBelemento\fP * campo, int qty)"
+
+.PP
+Definition at line \fB114\fP of file \fB901771\&.c\fP\&.
+.SS "void gioco (\fBelemento\fP * tessere, \fBelemento\fP * campo, int qty)"
+
+.PP
+Definition at line \fB346\fP of file \fB901771\&.c\fP\&.
+.SS "int interactive_mode (int enable, \fBelemento\fP * tessere, \fBelemento\fP * campo, int qty)"
+
+.PP
+Definition at line \fB445\fP of file \fB901771\&.c\fP\&.
+.SS "bool is_match (\fBelemento\fP * tessere, int qty, int s, int d, int lato)"
+
+.PP
+Definition at line \fB97\fP of file \fB901771\&.c\fP\&.
+.SS "bool is_null (\fBelemento\fP * tessere, int i)"
+
+.PP
+Definition at line \fB79\fP of file \fB901771\&.c\fP\&.
+.SS "bool is_void (\fBelemento\fP * tessere, int qty)"
+
+.PP
+Definition at line \fB85\fP of file \fB901771\&.c\fP\&.
+.SS "int main ()"
+
+.PP
+Definition at line \fB579\fP of file \fB901771\&.c\fP\&.
+.SS "int ricerca_tessera (\fBelemento\fP * tessere, int qty, int s, int d)"
+
+.PP
+Definition at line \fB142\fP of file \fB901771\&.c\fP\&.
+.SS "int single_comb (\fBelemento\fP * tessere, \fBelemento\fP * campo, int qty, \fBelemento\fP * tessere_rim, int s, int d, int ind, int mode)"
+
+.PP
+Definition at line \fB304\fP of file \fB901771\&.c\fP\&.
+.SS "void stampa_intestazione (int row, int col)"
+
+.PP
+Definition at line \fB27\fP of file \fB901771\&.c\fP\&.
+.SS "void stampa_tessera (int const s, int const d)"
+
+.PP
+Definition at line \fB59\fP of file \fB901771\&.c\fP\&.
+.SS "void stampa_tessere (\fBelemento\fP * tessere, int qty)"
+
+.PP
+Definition at line \fB68\fP of file \fB901771\&.c\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for 901771 from the source code\&.

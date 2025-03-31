@@ -1,0 +1,294 @@
+\doxysection{901771.c File Reference}
+\hypertarget{901771_8c}{}\label{901771_8c}\index{901771.c@{901771.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structelem}{elem}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned char \mbox{\hyperlink{901771_8c_a65f85814a8290f9797005d3b28e7e5fc}{uchar}}
+\item 
+typedef struct \mbox{\hyperlink{structelem}{elem}} \mbox{\hyperlink{901771_8c_a6cc21ca902019591f43d6632fcf7b217}{elemento}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{901771_8c_a67a0db04d321a74b7e7fcfd3f1a3f70b}{Status}} \{ \mbox{\hyperlink{901771_8c_a67a0db04d321a74b7e7fcfd3f1a3f70ba49959dd441dcda75d6898cf2c68fb374}{CONTINUE}}
+, \mbox{\hyperlink{901771_8c_a67a0db04d321a74b7e7fcfd3f1a3f70ba6114d9d0e20dc98878a365e418b83ee4}{INTERACTIVE}}
+, \mbox{\hyperlink{901771_8c_a67a0db04d321a74b7e7fcfd3f1a3f70ba9c74caa56a3c05723eb1dbad44bc9bc3}{AI}}
+, \mbox{\hyperlink{901771_8c_a67a0db04d321a74b7e7fcfd3f1a3f70ba8b9af67858708d770f017e4aae85900d}{FINISH}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{901771_8c_a341fa57d08f7890e4a4e7598c37e4005}{stampa\+\_\+intestazione}} (int row, int col)
+\item 
+void \mbox{\hyperlink{901771_8c_a765f5291c6452d6296225810048434d7}{stampa\+\_\+tessera}} (int const s, int const d)
+\item 
+void \mbox{\hyperlink{901771_8c_a521de595c4b0f4517fed5f49f5304619}{stampa\+\_\+tessere}} (\mbox{\hyperlink{901771_8c_a6cc21ca902019591f43d6632fcf7b217}{elemento}} \texorpdfstring{$\ast$}{*}tessere, int qty)
+\item 
+bool \mbox{\hyperlink{901771_8c_a311273381d75724373aaaf90a27f10e4}{is\+\_\+null}} (\mbox{\hyperlink{901771_8c_a6cc21ca902019591f43d6632fcf7b217}{elemento}} \texorpdfstring{$\ast$}{*}tessere, int i)
+\item 
+bool \mbox{\hyperlink{901771_8c_a150f3d071471e0f7e8687cd99ac6059d}{is\+\_\+void}} (\mbox{\hyperlink{901771_8c_a6cc21ca902019591f43d6632fcf7b217}{elemento}} \texorpdfstring{$\ast$}{*}tessere, int qty)
+\item 
+bool \mbox{\hyperlink{901771_8c_aa81ac64497708b5c8797844e12de6a50}{is\+\_\+match}} (\mbox{\hyperlink{901771_8c_a6cc21ca902019591f43d6632fcf7b217}{elemento}} \texorpdfstring{$\ast$}{*}tessere, int qty, int s, int d, int lato)
+\item 
+bool \mbox{\hyperlink{901771_8c_a19a3446abb79f1092c0992b3bbc4b7cc}{continue\+\_\+game}} (\mbox{\hyperlink{901771_8c_a6cc21ca902019591f43d6632fcf7b217}{elemento}} \texorpdfstring{$\ast$}{*}tessere, \mbox{\hyperlink{901771_8c_a6cc21ca902019591f43d6632fcf7b217}{elemento}} \texorpdfstring{$\ast$}{*}campo, int qty)
+\item 
+int \mbox{\hyperlink{901771_8c_abcddddad413338a3fc0f5cc2759e2640}{ricerca\+\_\+tessera}} (\mbox{\hyperlink{901771_8c_a6cc21ca902019591f43d6632fcf7b217}{elemento}} \texorpdfstring{$\ast$}{*}tessere, int qty, int s, int d)
+\item 
+void \mbox{\hyperlink{901771_8c_ad0bce46e3bb22c8ca626247323401f36}{aggiorna\+\_\+tessere}} (\mbox{\hyperlink{901771_8c_a6cc21ca902019591f43d6632fcf7b217}{elemento}} \texorpdfstring{$\ast$}{*}tessere, \mbox{\hyperlink{901771_8c_a6cc21ca902019591f43d6632fcf7b217}{elemento}} \texorpdfstring{$\ast$}{*}campo, int qty, int s, int d, int lato)
+\item 
+int \mbox{\hyperlink{901771_8c_a00993299fffcd2768dc4a1690e087ca3}{calcolo\+\_\+punteggio}} (\mbox{\hyperlink{901771_8c_a6cc21ca902019591f43d6632fcf7b217}{elemento}} \texorpdfstring{$\ast$}{*}tessere, int qty)
+\item 
+int \mbox{\hyperlink{901771_8c_a95f7300dfa1f793657c381c08b35d7ac}{best\+\_\+comb\+\_\+rec}} (\mbox{\hyperlink{901771_8c_a6cc21ca902019591f43d6632fcf7b217}{elemento}} \texorpdfstring{$\ast$}{*}tessere, \mbox{\hyperlink{901771_8c_a6cc21ca902019591f43d6632fcf7b217}{elemento}} \texorpdfstring{$\ast$}{*}campo, int qty, int camp\+\_\+qty, int act\+\_\+sum, int ind\+\_\+tex, int mode)
+\item 
+int \mbox{\hyperlink{901771_8c_ac1358d900160d4ebc44b229508c77c9f}{best\+\_\+comb}} (\mbox{\hyperlink{901771_8c_a6cc21ca902019591f43d6632fcf7b217}{elemento}} \texorpdfstring{$\ast$}{*}tessere, \mbox{\hyperlink{901771_8c_a6cc21ca902019591f43d6632fcf7b217}{elemento}} \texorpdfstring{$\ast$}{*}campo, int qty, \mbox{\hyperlink{901771_8c_a6cc21ca902019591f43d6632fcf7b217}{elemento}} \texorpdfstring{$\ast$}{*}tessere\+\_\+rim, int \texorpdfstring{$\ast$}{*}s, int \texorpdfstring{$\ast$}{*}d, int \texorpdfstring{$\ast$}{*}ind)
+\item 
+int \mbox{\hyperlink{901771_8c_a49c925d1965ae94997c7ff58823f38c1}{single\+\_\+comb}} (\mbox{\hyperlink{901771_8c_a6cc21ca902019591f43d6632fcf7b217}{elemento}} \texorpdfstring{$\ast$}{*}tessere, \mbox{\hyperlink{901771_8c_a6cc21ca902019591f43d6632fcf7b217}{elemento}} \texorpdfstring{$\ast$}{*}campo, int qty, \mbox{\hyperlink{901771_8c_a6cc21ca902019591f43d6632fcf7b217}{elemento}} \texorpdfstring{$\ast$}{*}tessere\+\_\+rim, int s, int d, int ind, int mode)
+\item 
+void \mbox{\hyperlink{901771_8c_acedb50aaaea3b4c4fc133b6fa435ed6a}{gioco}} (\mbox{\hyperlink{901771_8c_a6cc21ca902019591f43d6632fcf7b217}{elemento}} \texorpdfstring{$\ast$}{*}tessere, \mbox{\hyperlink{901771_8c_a6cc21ca902019591f43d6632fcf7b217}{elemento}} \texorpdfstring{$\ast$}{*}campo, int qty)
+\item 
+int \mbox{\hyperlink{901771_8c_a6c5deffb7afe0d440e1d234fcf23bfe3}{interactive\+\_\+mode}} (int enable, \mbox{\hyperlink{901771_8c_a6cc21ca902019591f43d6632fcf7b217}{elemento}} \texorpdfstring{$\ast$}{*}tessere, \mbox{\hyperlink{901771_8c_a6cc21ca902019591f43d6632fcf7b217}{elemento}} \texorpdfstring{$\ast$}{*}campo, int qty)
+\item 
+int \mbox{\hyperlink{901771_8c_a942b080d19f721844706e5f37663b2d5}{AI\+\_\+mode}} (int enable, \mbox{\hyperlink{901771_8c_a6cc21ca902019591f43d6632fcf7b217}{elemento}} \texorpdfstring{$\ast$}{*}tessere, \mbox{\hyperlink{901771_8c_a6cc21ca902019591f43d6632fcf7b217}{elemento}} \texorpdfstring{$\ast$}{*}campo, int qty)
+\item 
+int \mbox{\hyperlink{901771_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{901771_8c_a6cc21ca902019591f43d6632fcf7b217}\label{901771_8c_a6cc21ca902019591f43d6632fcf7b217} 
+\index{901771.c@{901771.c}!elemento@{elemento}}
+\index{elemento@{elemento}!901771.c@{901771.c}}
+\doxysubsubsection{\texorpdfstring{elemento}{elemento}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structelem}{elem}} \mbox{\hyperlink{901771_8c_a6cc21ca902019591f43d6632fcf7b217}{elemento}}}
+
+
+
+Definition at line \mbox{\hyperlink{901771_8c_source_l00018}{18}} of file \mbox{\hyperlink{901771_8c_source}{901771.\+c}}.
+
+\Hypertarget{901771_8c_a65f85814a8290f9797005d3b28e7e5fc}\label{901771_8c_a65f85814a8290f9797005d3b28e7e5fc} 
+\index{901771.c@{901771.c}!uchar@{uchar}}
+\index{uchar@{uchar}!901771.c@{901771.c}}
+\doxysubsubsection{\texorpdfstring{uchar}{uchar}}
+{\footnotesize\ttfamily typedef unsigned char \mbox{\hyperlink{901771_8c_a65f85814a8290f9797005d3b28e7e5fc}{uchar}}}
+
+
+
+Definition at line \mbox{\hyperlink{901771_8c_source_l00011}{11}} of file \mbox{\hyperlink{901771_8c_source}{901771.\+c}}.
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{901771_8c_a67a0db04d321a74b7e7fcfd3f1a3f70b}\label{901771_8c_a67a0db04d321a74b7e7fcfd3f1a3f70b} 
+\index{901771.c@{901771.c}!Status@{Status}}
+\index{Status@{Status}!901771.c@{901771.c}}
+\doxysubsubsection{\texorpdfstring{Status}{Status}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{901771_8c_a67a0db04d321a74b7e7fcfd3f1a3f70b}{Status}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CONTINUE@{CONTINUE}!901771.c@{901771.c}}\index{901771.c@{901771.c}!CONTINUE@{CONTINUE}}}\Hypertarget{901771_8c_a67a0db04d321a74b7e7fcfd3f1a3f70ba49959dd441dcda75d6898cf2c68fb374}\label{901771_8c_a67a0db04d321a74b7e7fcfd3f1a3f70ba49959dd441dcda75d6898cf2c68fb374} 
+CONTINUE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INTERACTIVE@{INTERACTIVE}!901771.c@{901771.c}}\index{901771.c@{901771.c}!INTERACTIVE@{INTERACTIVE}}}\Hypertarget{901771_8c_a67a0db04d321a74b7e7fcfd3f1a3f70ba6114d9d0e20dc98878a365e418b83ee4}\label{901771_8c_a67a0db04d321a74b7e7fcfd3f1a3f70ba6114d9d0e20dc98878a365e418b83ee4} 
+INTERACTIVE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AI@{AI}!901771.c@{901771.c}}\index{901771.c@{901771.c}!AI@{AI}}}\Hypertarget{901771_8c_a67a0db04d321a74b7e7fcfd3f1a3f70ba9c74caa56a3c05723eb1dbad44bc9bc3}\label{901771_8c_a67a0db04d321a74b7e7fcfd3f1a3f70ba9c74caa56a3c05723eb1dbad44bc9bc3} 
+AI&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FINISH@{FINISH}!901771.c@{901771.c}}\index{901771.c@{901771.c}!FINISH@{FINISH}}}\Hypertarget{901771_8c_a67a0db04d321a74b7e7fcfd3f1a3f70ba8b9af67858708d770f017e4aae85900d}\label{901771_8c_a67a0db04d321a74b7e7fcfd3f1a3f70ba8b9af67858708d770f017e4aae85900d} 
+FINISH&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{901771_8c_source_l00009}{9}} of file \mbox{\hyperlink{901771_8c_source}{901771.\+c}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{901771_8c_ad0bce46e3bb22c8ca626247323401f36}\label{901771_8c_ad0bce46e3bb22c8ca626247323401f36} 
+\index{901771.c@{901771.c}!aggiorna\_tessere@{aggiorna\_tessere}}
+\index{aggiorna\_tessere@{aggiorna\_tessere}!901771.c@{901771.c}}
+\doxysubsubsection{\texorpdfstring{aggiorna\_tessere()}{aggiorna\_tessere()}}
+{\footnotesize\ttfamily void aggiorna\+\_\+tessere (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{901771_8c_a6cc21ca902019591f43d6632fcf7b217}{elemento}} \texorpdfstring{$\ast$}{*}}]{tessere,  }\item[{\mbox{\hyperlink{901771_8c_a6cc21ca902019591f43d6632fcf7b217}{elemento}} \texorpdfstring{$\ast$}{*}}]{campo,  }\item[{int}]{qty,  }\item[{int}]{s,  }\item[{int}]{d,  }\item[{int}]{lato }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{901771_8c_source_l00153}{153}} of file \mbox{\hyperlink{901771_8c_source}{901771.\+c}}.
+
+\Hypertarget{901771_8c_a942b080d19f721844706e5f37663b2d5}\label{901771_8c_a942b080d19f721844706e5f37663b2d5} 
+\index{901771.c@{901771.c}!AI\_mode@{AI\_mode}}
+\index{AI\_mode@{AI\_mode}!901771.c@{901771.c}}
+\doxysubsubsection{\texorpdfstring{AI\_mode()}{AI\_mode()}}
+{\footnotesize\ttfamily int AI\+\_\+mode (\begin{DoxyParamCaption}\item[{int}]{enable,  }\item[{\mbox{\hyperlink{901771_8c_a6cc21ca902019591f43d6632fcf7b217}{elemento}} \texorpdfstring{$\ast$}{*}}]{tessere,  }\item[{\mbox{\hyperlink{901771_8c_a6cc21ca902019591f43d6632fcf7b217}{elemento}} \texorpdfstring{$\ast$}{*}}]{campo,  }\item[{int}]{qty }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{901771_8c_source_l00467}{467}} of file \mbox{\hyperlink{901771_8c_source}{901771.\+c}}.
+
+\Hypertarget{901771_8c_ac1358d900160d4ebc44b229508c77c9f}\label{901771_8c_ac1358d900160d4ebc44b229508c77c9f} 
+\index{901771.c@{901771.c}!best\_comb@{best\_comb}}
+\index{best\_comb@{best\_comb}!901771.c@{901771.c}}
+\doxysubsubsection{\texorpdfstring{best\_comb()}{best\_comb()}}
+{\footnotesize\ttfamily int best\+\_\+comb (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{901771_8c_a6cc21ca902019591f43d6632fcf7b217}{elemento}} \texorpdfstring{$\ast$}{*}}]{tessere,  }\item[{\mbox{\hyperlink{901771_8c_a6cc21ca902019591f43d6632fcf7b217}{elemento}} \texorpdfstring{$\ast$}{*}}]{campo,  }\item[{int}]{qty,  }\item[{\mbox{\hyperlink{901771_8c_a6cc21ca902019591f43d6632fcf7b217}{elemento}} \texorpdfstring{$\ast$}{*}}]{tessere\+\_\+rim,  }\item[{int \texorpdfstring{$\ast$}{*}}]{s,  }\item[{int \texorpdfstring{$\ast$}{*}}]{d,  }\item[{int \texorpdfstring{$\ast$}{*}}]{ind }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{901771_8c_source_l00244}{244}} of file \mbox{\hyperlink{901771_8c_source}{901771.\+c}}.
+
+\Hypertarget{901771_8c_a95f7300dfa1f793657c381c08b35d7ac}\label{901771_8c_a95f7300dfa1f793657c381c08b35d7ac} 
+\index{901771.c@{901771.c}!best\_comb\_rec@{best\_comb\_rec}}
+\index{best\_comb\_rec@{best\_comb\_rec}!901771.c@{901771.c}}
+\doxysubsubsection{\texorpdfstring{best\_comb\_rec()}{best\_comb\_rec()}}
+{\footnotesize\ttfamily int best\+\_\+comb\+\_\+rec (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{901771_8c_a6cc21ca902019591f43d6632fcf7b217}{elemento}} \texorpdfstring{$\ast$}{*}}]{tessere,  }\item[{\mbox{\hyperlink{901771_8c_a6cc21ca902019591f43d6632fcf7b217}{elemento}} \texorpdfstring{$\ast$}{*}}]{campo,  }\item[{int}]{qty,  }\item[{int}]{camp\+\_\+qty,  }\item[{int}]{act\+\_\+sum,  }\item[{int}]{ind\+\_\+tex,  }\item[{int}]{mode }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{901771_8c_source_l00202}{202}} of file \mbox{\hyperlink{901771_8c_source}{901771.\+c}}.
+
+\Hypertarget{901771_8c_a00993299fffcd2768dc4a1690e087ca3}\label{901771_8c_a00993299fffcd2768dc4a1690e087ca3} 
+\index{901771.c@{901771.c}!calcolo\_punteggio@{calcolo\_punteggio}}
+\index{calcolo\_punteggio@{calcolo\_punteggio}!901771.c@{901771.c}}
+\doxysubsubsection{\texorpdfstring{calcolo\_punteggio()}{calcolo\_punteggio()}}
+{\footnotesize\ttfamily int calcolo\+\_\+punteggio (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{901771_8c_a6cc21ca902019591f43d6632fcf7b217}{elemento}} \texorpdfstring{$\ast$}{*}}]{tessere,  }\item[{int}]{qty }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{901771_8c_source_l00196}{196}} of file \mbox{\hyperlink{901771_8c_source}{901771.\+c}}.
+
+\Hypertarget{901771_8c_a19a3446abb79f1092c0992b3bbc4b7cc}\label{901771_8c_a19a3446abb79f1092c0992b3bbc4b7cc} 
+\index{901771.c@{901771.c}!continue\_game@{continue\_game}}
+\index{continue\_game@{continue\_game}!901771.c@{901771.c}}
+\doxysubsubsection{\texorpdfstring{continue\_game()}{continue\_game()}}
+{\footnotesize\ttfamily bool continue\+\_\+game (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{901771_8c_a6cc21ca902019591f43d6632fcf7b217}{elemento}} \texorpdfstring{$\ast$}{*}}]{tessere,  }\item[{\mbox{\hyperlink{901771_8c_a6cc21ca902019591f43d6632fcf7b217}{elemento}} \texorpdfstring{$\ast$}{*}}]{campo,  }\item[{int}]{qty }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{901771_8c_source_l00114}{114}} of file \mbox{\hyperlink{901771_8c_source}{901771.\+c}}.
+
+\Hypertarget{901771_8c_acedb50aaaea3b4c4fc133b6fa435ed6a}\label{901771_8c_acedb50aaaea3b4c4fc133b6fa435ed6a} 
+\index{901771.c@{901771.c}!gioco@{gioco}}
+\index{gioco@{gioco}!901771.c@{901771.c}}
+\doxysubsubsection{\texorpdfstring{gioco()}{gioco()}}
+{\footnotesize\ttfamily void gioco (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{901771_8c_a6cc21ca902019591f43d6632fcf7b217}{elemento}} \texorpdfstring{$\ast$}{*}}]{tessere,  }\item[{\mbox{\hyperlink{901771_8c_a6cc21ca902019591f43d6632fcf7b217}{elemento}} \texorpdfstring{$\ast$}{*}}]{campo,  }\item[{int}]{qty }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{901771_8c_source_l00346}{346}} of file \mbox{\hyperlink{901771_8c_source}{901771.\+c}}.
+
+\Hypertarget{901771_8c_a6c5deffb7afe0d440e1d234fcf23bfe3}\label{901771_8c_a6c5deffb7afe0d440e1d234fcf23bfe3} 
+\index{901771.c@{901771.c}!interactive\_mode@{interactive\_mode}}
+\index{interactive\_mode@{interactive\_mode}!901771.c@{901771.c}}
+\doxysubsubsection{\texorpdfstring{interactive\_mode()}{interactive\_mode()}}
+{\footnotesize\ttfamily int interactive\+\_\+mode (\begin{DoxyParamCaption}\item[{int}]{enable,  }\item[{\mbox{\hyperlink{901771_8c_a6cc21ca902019591f43d6632fcf7b217}{elemento}} \texorpdfstring{$\ast$}{*}}]{tessere,  }\item[{\mbox{\hyperlink{901771_8c_a6cc21ca902019591f43d6632fcf7b217}{elemento}} \texorpdfstring{$\ast$}{*}}]{campo,  }\item[{int}]{qty }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{901771_8c_source_l00445}{445}} of file \mbox{\hyperlink{901771_8c_source}{901771.\+c}}.
+
+\Hypertarget{901771_8c_aa81ac64497708b5c8797844e12de6a50}\label{901771_8c_aa81ac64497708b5c8797844e12de6a50} 
+\index{901771.c@{901771.c}!is\_match@{is\_match}}
+\index{is\_match@{is\_match}!901771.c@{901771.c}}
+\doxysubsubsection{\texorpdfstring{is\_match()}{is\_match()}}
+{\footnotesize\ttfamily bool is\+\_\+match (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{901771_8c_a6cc21ca902019591f43d6632fcf7b217}{elemento}} \texorpdfstring{$\ast$}{*}}]{tessere,  }\item[{int}]{qty,  }\item[{int}]{s,  }\item[{int}]{d,  }\item[{int}]{lato }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{901771_8c_source_l00097}{97}} of file \mbox{\hyperlink{901771_8c_source}{901771.\+c}}.
+
+\Hypertarget{901771_8c_a311273381d75724373aaaf90a27f10e4}\label{901771_8c_a311273381d75724373aaaf90a27f10e4} 
+\index{901771.c@{901771.c}!is\_null@{is\_null}}
+\index{is\_null@{is\_null}!901771.c@{901771.c}}
+\doxysubsubsection{\texorpdfstring{is\_null()}{is\_null()}}
+{\footnotesize\ttfamily bool is\+\_\+null (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{901771_8c_a6cc21ca902019591f43d6632fcf7b217}{elemento}} \texorpdfstring{$\ast$}{*}}]{tessere,  }\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{901771_8c_source_l00079}{79}} of file \mbox{\hyperlink{901771_8c_source}{901771.\+c}}.
+
+\Hypertarget{901771_8c_a150f3d071471e0f7e8687cd99ac6059d}\label{901771_8c_a150f3d071471e0f7e8687cd99ac6059d} 
+\index{901771.c@{901771.c}!is\_void@{is\_void}}
+\index{is\_void@{is\_void}!901771.c@{901771.c}}
+\doxysubsubsection{\texorpdfstring{is\_void()}{is\_void()}}
+{\footnotesize\ttfamily bool is\+\_\+void (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{901771_8c_a6cc21ca902019591f43d6632fcf7b217}{elemento}} \texorpdfstring{$\ast$}{*}}]{tessere,  }\item[{int}]{qty }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{901771_8c_source_l00085}{85}} of file \mbox{\hyperlink{901771_8c_source}{901771.\+c}}.
+
+\Hypertarget{901771_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{901771_8c_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+\index{901771.c@{901771.c}!main@{main}}
+\index{main@{main}!901771.c@{901771.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{901771_8c_source_l00579}{579}} of file \mbox{\hyperlink{901771_8c_source}{901771.\+c}}.
+
+\Hypertarget{901771_8c_abcddddad413338a3fc0f5cc2759e2640}\label{901771_8c_abcddddad413338a3fc0f5cc2759e2640} 
+\index{901771.c@{901771.c}!ricerca\_tessera@{ricerca\_tessera}}
+\index{ricerca\_tessera@{ricerca\_tessera}!901771.c@{901771.c}}
+\doxysubsubsection{\texorpdfstring{ricerca\_tessera()}{ricerca\_tessera()}}
+{\footnotesize\ttfamily int ricerca\+\_\+tessera (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{901771_8c_a6cc21ca902019591f43d6632fcf7b217}{elemento}} \texorpdfstring{$\ast$}{*}}]{tessere,  }\item[{int}]{qty,  }\item[{int}]{s,  }\item[{int}]{d }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{901771_8c_source_l00142}{142}} of file \mbox{\hyperlink{901771_8c_source}{901771.\+c}}.
+
+\Hypertarget{901771_8c_a49c925d1965ae94997c7ff58823f38c1}\label{901771_8c_a49c925d1965ae94997c7ff58823f38c1} 
+\index{901771.c@{901771.c}!single\_comb@{single\_comb}}
+\index{single\_comb@{single\_comb}!901771.c@{901771.c}}
+\doxysubsubsection{\texorpdfstring{single\_comb()}{single\_comb()}}
+{\footnotesize\ttfamily int single\+\_\+comb (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{901771_8c_a6cc21ca902019591f43d6632fcf7b217}{elemento}} \texorpdfstring{$\ast$}{*}}]{tessere,  }\item[{\mbox{\hyperlink{901771_8c_a6cc21ca902019591f43d6632fcf7b217}{elemento}} \texorpdfstring{$\ast$}{*}}]{campo,  }\item[{int}]{qty,  }\item[{\mbox{\hyperlink{901771_8c_a6cc21ca902019591f43d6632fcf7b217}{elemento}} \texorpdfstring{$\ast$}{*}}]{tessere\+\_\+rim,  }\item[{int}]{s,  }\item[{int}]{d,  }\item[{int}]{ind,  }\item[{int}]{mode }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{901771_8c_source_l00304}{304}} of file \mbox{\hyperlink{901771_8c_source}{901771.\+c}}.
+
+\Hypertarget{901771_8c_a341fa57d08f7890e4a4e7598c37e4005}\label{901771_8c_a341fa57d08f7890e4a4e7598c37e4005} 
+\index{901771.c@{901771.c}!stampa\_intestazione@{stampa\_intestazione}}
+\index{stampa\_intestazione@{stampa\_intestazione}!901771.c@{901771.c}}
+\doxysubsubsection{\texorpdfstring{stampa\_intestazione()}{stampa\_intestazione()}}
+{\footnotesize\ttfamily void stampa\+\_\+intestazione (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{901771_8c_source_l00027}{27}} of file \mbox{\hyperlink{901771_8c_source}{901771.\+c}}.
+
+\Hypertarget{901771_8c_a765f5291c6452d6296225810048434d7}\label{901771_8c_a765f5291c6452d6296225810048434d7} 
+\index{901771.c@{901771.c}!stampa\_tessera@{stampa\_tessera}}
+\index{stampa\_tessera@{stampa\_tessera}!901771.c@{901771.c}}
+\doxysubsubsection{\texorpdfstring{stampa\_tessera()}{stampa\_tessera()}}
+{\footnotesize\ttfamily void stampa\+\_\+tessera (\begin{DoxyParamCaption}\item[{int const}]{s,  }\item[{int const}]{d }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{901771_8c_source_l00059}{59}} of file \mbox{\hyperlink{901771_8c_source}{901771.\+c}}.
+
+\Hypertarget{901771_8c_a521de595c4b0f4517fed5f49f5304619}\label{901771_8c_a521de595c4b0f4517fed5f49f5304619} 
+\index{901771.c@{901771.c}!stampa\_tessere@{stampa\_tessere}}
+\index{stampa\_tessere@{stampa\_tessere}!901771.c@{901771.c}}
+\doxysubsubsection{\texorpdfstring{stampa\_tessere()}{stampa\_tessere()}}
+{\footnotesize\ttfamily void stampa\+\_\+tessere (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{901771_8c_a6cc21ca902019591f43d6632fcf7b217}{elemento}} \texorpdfstring{$\ast$}{*}}]{tessere,  }\item[{int}]{qty }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{901771_8c_source_l00068}{68}} of file \mbox{\hyperlink{901771_8c_source}{901771.\+c}}.
+
